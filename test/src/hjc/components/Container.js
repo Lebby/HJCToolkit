@@ -1,10 +1,15 @@
 (function ($)
 {
-  
+
   function Container(selector)
   {
-    var _items;
+    var _items = [];
     var _selector;
+
+    if (selector != undefined)
+      _selector = selector;
+    else
+      selector = "body";
 
     this.selector = function (selector)
     {
@@ -15,11 +20,11 @@
       return this;
     };
 
-    this.items = function (items)
+    this.items = function ()
     {
-      _items = items;
+      return _items;
     };
-    
+
   }
 
 

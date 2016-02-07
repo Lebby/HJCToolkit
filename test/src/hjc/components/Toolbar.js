@@ -1,17 +1,9 @@
 (function ($)
 {
+  hjc["_"].createObject(Toolbar, hjc.Container, "hjc");
   function Toolbar()
   {
-    var _items;
-    var _selector;
-    
-    
-    this.selector = function(selector)
-    {
-      if (selector == undefined ) return _selector;
-      else _selector = selector;
-      return this;
-    };
+    hjc.Container.call(this, selector);
   }
 
 

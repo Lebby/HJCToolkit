@@ -1,17 +1,11 @@
 (function ($)
 {
-  function Canvas()
+
+  hjc["_"].createObject(Canvas, hjc.Container, "hjc");
+  function Canvas(selector)
   {
-    var _items;
-    var _selector;
+    hjc.Container.call(this,selector);
     
-    
-    this.selector = function(selector)
-    {
-      if (selector == undefined ) return _selector;
-      else _selector = selector;
-      return this;
-    };
   }
 
 
